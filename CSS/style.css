@@ -48,8 +48,19 @@ header img{
 /******************** Recherche *********************************/
 /******************************************************************/
 
+#recherche h1{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sous-titre{
+    margin: 0;
+    font-weight: bold;
+}
+
 #filtres h2{
     margin-top: 35px;
+    font-weight: bold;
 }
 
 #filtres {
@@ -71,16 +82,18 @@ header img{
 }
 
 .filtre{
-    margin-right: 20px;
     border: 2px solid #d9d9d9;
     border-radius: 2rem;
     text-align: center;
     font-weight: bold;
-    width: 100%;
+    width: 69%;
     height: 100%;
     align-items: center;
     max-width: 80%;
-    margin-bottom: 10px;
+ }
+
+ .filtre:hover{
+     background-color: #DEEBFF;
  }
 
 header a{
@@ -102,12 +115,17 @@ header a{
 
 
 .formulaire{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 30%;
 }
 
+.formulaire input{
+    font-weight: bold;
+    color: black;
+    height: 33px;
+}
 
 .filtre i{
     margin: 10px;
@@ -122,6 +140,7 @@ header a{
     font-weight: bold;
     border-radius: 0 1rem 1rem 0;
     padding: 0 1.5rem;
+    height: 40px;
 }
 
 .infos {
@@ -129,6 +148,11 @@ header a{
     width: 100%;
     margin:20px
 }
+
+.infos p{
+    font-weight: bold;
+}
+
 .bouton_infos{
     margin-right: 20px;
     max-width: 20%;
@@ -136,11 +160,21 @@ header a{
     margin-top: 7px;
 }
 
+
+.fa-location-dot{
+    margin: 0;
+    background-color: #D9D9D9;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 40px;
+    width: 40px;
+
+}
+
+
 .fa-solid .fa-circle-info{
     width: 100%;
 }
-
-.fa
 
 /******************************************************************/
 /******************** Hebergement *********************************/
@@ -149,6 +183,7 @@ header a{
 
 #hebergements {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 40px;
     width: 100%;
@@ -157,6 +192,7 @@ header a{
 #hebergements h2{
     height: 5%;
     margin-left: 4%;
+    font-weight: bold;
 }
 
 .hebergement {
@@ -224,6 +260,7 @@ header a{
 
 figcaption h3, figcaption p {
     margin: 0;
+    font-weight: bold;
 }
 
 .populaire {
@@ -281,6 +318,10 @@ figcaption h3, figcaption p {
     margin-inline-end: 0px;
     font-weight: bold;
     margin-left: 20px;
+}
+
+.afficher p{
+    font-weight: bold;
 }
 
 .fa-star {
@@ -342,6 +383,7 @@ figcaption h3, figcaption p {
     font-weight: bold;
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 
@@ -362,22 +404,80 @@ footer div{
     margin-right: 15%;
 }
 
+footer h3{
+    font-weight: bold;
+}
+
 footer ul{
     margin: 0;
     width: 100%;
     text-align: start;
 }
 
-/******************** Media Queries Tablette 1023px ***********************************/
-
-@media (max-widht:1023px) {
-    #hebergements {
-        display: none;
-    }
+footer li{
+    font-weight: bold;
 }
 
 /******************** Media Queries Telephone 767px ***********************************/
 
-@media (max-widht:767px) {
+@media screen and (max-width:767px) {
 
+    
+    header {
+        flex-wrap: wrap;
+        background-color: aqua;
+    }
+
+    header a{
+        border-bottom: 3px solid #0065FC;
+    }
+
+    #hebergements{
+         flex-direction: column-reverse;
+         background-color: aqua;
+    }
+
+    .cards-populaires{
+        flex-wrap: nowrap;
+    }
+}
+
+/******************** Media Queries Tablette 1023px ***********************************/
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+
+    #hebergements {
+        margin: 0;
+    }
+
+    .card-populaire{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hebergement{
+        width: 90%;
+        margin-left: 40px;
+    }
+
+    .populaire {
+        width: 90%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 40px;
+    }
+
+    .cards-populaires{
+        flex-wrap: nowrap;
+        margin-top: 40px;
+        margin-bottom: -30px;
+    }
+
+    #footer {
+        margin-right:30px;
+    }
+
+    #footer div{
+         text-align: center;
+    }
 }
