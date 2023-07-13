@@ -77,7 +77,7 @@ header img{
     border-radius: 30px;
     border-color: black;
     margin-left: 10%;
-    width: 70%;
+    width: 90%;
     height: 100%;
 }
 
@@ -85,8 +85,9 @@ header img{
     border: 2px solid #d9d9d9;
     border-radius: 2rem;
     text-align: center;
-    font-weight: bold;
-    width: 69%;
+    font-weight: normal  /* bold */;
+    font-size: x-small;
+    margin-right: 30px;
     height: 100%;
     align-items: center;
     max-width: 80%;
@@ -115,10 +116,10 @@ header a{
 
 
 .formulaire{
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 30%;
+    max-width: 40%;
 }
 
 .formulaire input{
@@ -418,30 +419,6 @@ footer li{
     font-weight: bold;
 }
 
-/******************** Media Queries Telephone 767px ***********************************/
-
-@media screen and (max-width:767px) {
-
-    
-    header {
-        flex-wrap: wrap;
-        background-color: aqua;
-    }
-
-    header a{
-        border-bottom: 3px solid #0065FC;
-    }
-
-    #hebergements{
-         flex-direction: column-reverse;
-         background-color: aqua;
-    }
-
-    .cards-populaires{
-        flex-wrap: nowrap;
-    }
-}
-
 /******************** Media Queries Tablette 1023px ***********************************/
 
 @media screen and (max-width:1023px) and (min-width:768px) {
@@ -480,4 +457,35 @@ footer li{
     #footer div{
          text-align: center;
     }
+}
+
+/******************** Media Queries Telephone 767px ***********************************/
+
+@media screen and (max-width:767px) {
+
+    
+    header {
+        flex-wrap: wrap;
+        background-color: aqua;
+    }
+
+    header a{
+        border-bottom: 3px solid #0065FC;
+    }
+
+    header img {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    #hebergements{
+         flex-direction: column-reverse;
+         background-color: aqua;
+    }
+
+    .cards-populaires{
+        flex-wrap: nowrap;
+    }
+
+
 }
